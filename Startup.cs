@@ -19,6 +19,7 @@ using MyDatingApp.Data;
 using MyDatingApp.Entities;
 using MyDatingApp.Extensions;
 using MyDatingApp.Interface;
+using MyDatingApp.Middleware;
 using MyDatingApp.Services;
 
 namespace API
@@ -61,6 +62,7 @@ namespace API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
 
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

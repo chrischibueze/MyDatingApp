@@ -17,6 +17,7 @@ namespace MyDatingApp.Data
         }
 
         public DbSet<AppUser> Users {get; set;}
+        //  public DbSet<Photo> photo {get; set;}
     }
 
 }
